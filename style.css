@@ -11,7 +11,7 @@ body {
       rgba(0, 0, 0, 0.158),
       rgba(148, 65, 65, 0.082)
     ),
-    url("bg1.jpg");
+    url("bg.jpg");
   display: flex;
   justify-content: center;
   align-items: center;
