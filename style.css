@@ -2,8 +2,8 @@
 *::after,
 *::before {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
 }
 
 body {
@@ -11,7 +11,7 @@ body {
       rgba(0, 0, 0, 0.158),
       rgba(148, 65, 65, 0.082)
     ),
-    url("bg.jpg");
+    url("bg1.jpg");
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,10 +22,26 @@ body {
 .clock {
   width: 400px;
   height: 400px;
-  background-color: rgba(255, 255, 255, 0.795);
+  background-color: rgba(255, 255, 255, 0.644);
   border-radius: 50%;
   border: 2px solid black;
   position: relative;
+  box-shadow: 14px 8px 20px 2px rgb(0 0 0 / 37%), 0 6px 20px 0 rgb(0 0 0 / 95%);
+}
+
+.clock .circle {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.733);
+  border-radius: 50%;
+  border: 2px solid black;
+  position: absolute;
+  right: 50px;
+  left: 50px;
+  top: 50px;
+  bottom: 50px;
+
+
 }
 
 .clock .number {
@@ -35,7 +51,8 @@ body {
   height: 100%;
   text-align: center;
   transform: rotate(var(--rotation));
-  font-size: 1.75rem;
+  font-size: 45px;
+
 }
 
 .clock .number1 {
@@ -85,6 +102,10 @@ body {
   transform-origin: bottom;
   z-index: 10;
   transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+
+  box-shadow: 4px 3px 2px 0px rgb(0 0 0 / 41%), 0 6px 20px 0 rgb(0 0 0 / 1%);
+
+  
 }
 
 .clock::after {
@@ -98,21 +119,22 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
+  box-shadow: 4px 3px 2px 0px rgb(0 0 0 / 41%), 0 6px 20px 0 rgb(0 0 0 / 1%);
 }
 
 .clock .hand.second {
   width: 4px;
-  height: 42%;
+  height: 35%;
   background-color: red;
 }
 
 .clock .hand.minute {
   width: 9px;
-  height: 37%;
+  height: 32%;
   background-color: black;
 }
 .clock .hand.hour {
   width: 13px;
-  height: 30%;
+  height: 28%;
   background-color: black;
 }
